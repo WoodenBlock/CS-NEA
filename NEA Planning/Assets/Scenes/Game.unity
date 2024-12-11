@@ -893,6 +893,7 @@ MonoBehaviour:
   length: 9
   apple: {fileID: 7155476386901660907, guid: 795a252d807e99c448b38e8f2e718c2e, type: 3}
   appleSpawned: 0
+  headMove: {fileID: 1348343596}
   scale: 1
   score: 0
   scoreChange: 0
