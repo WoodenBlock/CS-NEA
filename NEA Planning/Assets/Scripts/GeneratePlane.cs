@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,7 @@ public class GeneratePlane : MonoBehaviour
     [Header("Apple Spawning")]
     public GameObject apple;
     public Boolean appleSpawned = false;
+    public HeadMovement headMove;
 
     [Header("Parameters")]
     public int scale;
@@ -50,9 +52,16 @@ public class GeneratePlane : MonoBehaviour
     {
         if (!appleSpawned)
         {
-            int x = UnityEngine.Random.Range(0, length) * scale * 10;
-            int z = UnityEngine.Random.Range(0, length) * scale * 10;
-            GameObject newGrid = Instantiate(apple, new Vector3(x, 1f, z), Quaternion.identity, transform);
+            Boolean spawned = false;
+            while (!spawned) {
+                int x = UnityEngine.Random.Range(0, length) * scale * 10;
+                int z = UnityEngine.Random.Range(0, length) * scale * 10;
+                Vector3 posCord = new Vector3(x, 0, z);
+                if (!headMove.snakeParts.Contains(posCord)) {
+                    GameObject newGrid = Instantiate(apple, new Vector3(x, 1f, z), Quaternion.identity, transform);
+                    spawned = true;
+                }
+            }
             
             appleSpawned = true;
         }
