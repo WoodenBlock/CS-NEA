@@ -11,6 +11,7 @@ public class GeneratePlane : MonoBehaviour
     public GameObject plane;
     public GameObject plane1;
     public GameObject parent;
+    public GameObject wall;
     public int length;
 
     [Header("Apple Spawning")]
@@ -42,6 +43,7 @@ public class GeneratePlane : MonoBehaviour
     void Start()
     {
         InstantiatePlane();
+        InstantiateWalls();
     }
 
     void SpawnApple()
@@ -56,6 +58,18 @@ public class GeneratePlane : MonoBehaviour
         }
     }
 
+    void InstantiateWalls() {
+        for(int x = -1; x < length + 1; x++) {
+            int actualX = x * scale * 10;
+            Instantiate(wall, new Vector3(actualX, 5, -10f), Quaternion.identity, parent.transform);
+            Instantiate(wall, new Vector3(actualX, 5, length * 10), Quaternion.identity, parent.transform);
+        }
+        for(int z = 0; z < length; z++) {
+            int actualZ = z * scale * 10;
+            Instantiate(wall, new Vector3(-10f, 5, actualZ), Quaternion.identity, parent.transform);
+            Instantiate(wall, new Vector3(length * 10, 5, actualZ), Quaternion.identity, parent.transform);
+        }
+    }
     void InstantiatePlane()
     {
         for(int i = 0; i < length * length; i++)

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -106,6 +107,10 @@ public class HeadMovement : MonoBehaviour
                 gameManager.scoreChange = false;
             }
             
+        }
+        else if (other.gameObject.tag == "Wall") {
+            print("gameover by wall");
+            gameManager.TriggerGameOver();
         }
     }
     private void OnTriggerStay(Collider other)

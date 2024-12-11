@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -889,6 +889,7 @@ MonoBehaviour:
   plane: {fileID: 6949140678345103448, guid: 1c66a067274ac0f44b8afd2a415e38e1, type: 3}
   plane1: {fileID: 5905180183497307933, guid: e2869836e79b9944aa98ca277bd6e6fc, type: 3}
   parent: {fileID: 1193488300}
+  wall: {fileID: 1207199649378535051, guid: 2808ac92de512f14d8ef8b720b9eed5b, type: 3}
   length: 9
   apple: {fileID: 7155476386901660907, guid: 795a252d807e99c448b38e8f2e718c2e, type: 3}
   appleSpawned: 0
