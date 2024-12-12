@@ -13,7 +13,9 @@ public class HeadMovement : MonoBehaviour
 {
     [Header("Movement")]
 
-    public float moveSpeed;
+    public float baseSpeed;
+    public float speedFactor;
+    public float maxSpeed;
 
     Vector3 moveDirection;
 
@@ -141,6 +143,7 @@ public class HeadMovement : MonoBehaviour
 
     private void MoveHead()
     {
-        rb.AddForce(orientation.forward * moveSpeed * 10f, ForceMode.Force);
+        float actualSpeed = Math.Min(baseSpeed + gameManager.score * speedFactor, maxSpeed);
+        rb.AddForce(orientation.forward * actualSpeed * 10f, ForceMode.Force);
     }
 }
