@@ -825,7 +825,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f551549060e464796c52bebb2c85a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 90
+  baseSpeed: 80
+  speedFactor: 5
+  maxSpeed: 150
   orientation: {fileID: 1348343594}
   gameManager: {fileID: 1541493553}
   snakeBody: {fileID: 4393126760241317348, guid: 6af5c304200b69b45954eb42c373f814, type: 3}
