@@ -56,6 +56,10 @@ public class GeneratePlane : MonoBehaviour
     void Start()
     {
         InstantiatePlane();
+        background.SetActive(false);
+        scoreDisplay.gameObject.SetActive(true);
+        gamePausedUI.SetActive(false);
+        gameOverUI.SetActive(false);
         InstantiateWalls();
     }
 
@@ -129,6 +133,10 @@ public class GeneratePlane : MonoBehaviour
 
     public void QuitButton() {
         SceneManager.LoadScene(0);
+    }
+
+    public void RestartGame() {
+        SceneManager.LoadScene(1);
     }
 
 }
