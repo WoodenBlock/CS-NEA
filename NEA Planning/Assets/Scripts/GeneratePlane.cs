@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GeneratePlane : MonoBehaviour
@@ -26,20 +27,30 @@ public class GeneratePlane : MonoBehaviour
 
     [Header("Score")]
     public int score = 0;
+    public int highScore = 0;
     public Boolean scoreChange = false;
     public TextMeshProUGUI scoreDisplay;
 
     [Header("Game Over")]
     public GameObject gameOverUI;
 
+    public GameObject background;
+
+    private Boolean gameOver = false;
+
     [Header("Pausing")]
     public Boolean gamePaused;
+
+    public GameObject gamePausedUI;
 
 
 
     void Update()
     {
         SpawnApple();
+        PauseControl();
+        background.SetActive(gamePaused);
+        scoreDisplay.gameObject.SetActive(!gamePaused);
         scoreDisplay.text = score.ToString();
     }
     void Start()
@@ -99,7 +110,25 @@ public class GeneratePlane : MonoBehaviour
     public void TriggerGameOver()
     {
         gamePaused = true;
+        if (highScore < score) {
+            highScore = score;
+        }
+        score = 0;
         gameOverUI.SetActive(true);
+        gameOver = true;
+    }
+
+    public void PauseControl() {
+        if (Input.GetKeyDown(KeyCode.Escape) && !gameOver) { 
+            //print(gamePaused);
+            gamePaused = !gamePaused;
+            //print(gamePaused);
+            gamePausedUI.SetActive(gamePaused);
+        }
+    }
+
+    public void QuitButton() {
+        SceneManager.LoadScene(0);
     }
 
 }

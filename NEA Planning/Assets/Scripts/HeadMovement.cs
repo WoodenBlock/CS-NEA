@@ -54,6 +54,7 @@ public class HeadMovement : MonoBehaviour
         if(!gameManager.gamePaused) { MoveHead(); }
         else
         {
+            //print("snake movement thinks game is paused");
             rb.velocity = Vector3.zero;
         }
     }
@@ -111,7 +112,7 @@ public class HeadMovement : MonoBehaviour
             
         }
         else if (other.gameObject.tag == "Wall") {
-            print("gameover by wall");
+            //print("gameover by wall");
             gameManager.TriggerGameOver();
         }
     }
