@@ -45,9 +45,17 @@ public class HeadMovement : MonoBehaviour
     public void Start()
     {
         rb = GetComponent<Rigidbody>();
+        setupSnake();
+    }
+
+    private void setupSnake () {
         transform.rotation = Quaternion.identity;
         transform.position = new Vector3 (0, 3, 0);
-
+        snakeParts = new LinkedList<Vector3>();
+        foreach (GameObject part in oldSnakeParts) {
+            Destroy(part);
+        }
+        oldSnakeParts = new LinkedList<GameObject>();
     }
     private void FixedUpdate()
     {
@@ -68,6 +76,9 @@ public class HeadMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             qTurnLeft = true;
+        }
+        if(gameManager.gameRestart == true) {
+
         }
     }
 

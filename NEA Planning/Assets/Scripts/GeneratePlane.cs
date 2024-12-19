@@ -30,6 +30,9 @@ public class GeneratePlane : MonoBehaviour
     public int highScore = 0;
     public Boolean scoreChange = false;
     public TextMeshProUGUI scoreDisplay;
+    public TextMeshProUGUI highScoreDisplay;
+
+    public GameObject scoreElements;
 
     [Header("Game Over")]
     public GameObject gameOverUI;
@@ -37,6 +40,8 @@ public class GeneratePlane : MonoBehaviour
     public GameObject background;
 
     private Boolean gameOver = false;
+
+    public Boolean gameRestart = false;
 
     [Header("Pausing")]
     public Boolean gamePaused;
@@ -50,17 +55,27 @@ public class GeneratePlane : MonoBehaviour
         SpawnApple();
         PauseControl();
         background.SetActive(gamePaused);
-        scoreDisplay.gameObject.SetActive(!gamePaused);
+        scoreElements.SetActive(!gamePaused);
         scoreDisplay.text = score.ToString();
+        highScoreDisplay.text = highScore.ToString();
     }
     void Start()
     {
         InstantiatePlane();
+        InstantiateWalls();
+        setupGame();
+    }
+
+    private void setupGame() {
         background.SetActive(false);
-        scoreDisplay.gameObject.SetActive(true);
+        scoreElements.SetActive(true);
         gamePausedUI.SetActive(false);
         gameOverUI.SetActive(false);
-        InstantiateWalls();
+        score = 0;
+        gameRestart = false;
+        gameOver = false;
+        gamePaused = false;
+        appleSpawned = false;
     }
 
     void SpawnApple()
@@ -136,7 +151,8 @@ public class GeneratePlane : MonoBehaviour
     }
 
     public void RestartGame() {
-        SceneManager.LoadScene(1);
+        gameRestart = false;
+        setupGame();
     }
 
 }
