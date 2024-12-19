@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GeneratePlane : MonoBehaviour
@@ -26,26 +27,55 @@ public class GeneratePlane : MonoBehaviour
 
     [Header("Score")]
     public int score = 0;
+    public int highScore = 0;
     public Boolean scoreChange = false;
     public TextMeshProUGUI scoreDisplay;
+    public TextMeshProUGUI highScoreDisplay;
+
+    public GameObject scoreElements;
 
     [Header("Game Over")]
     public GameObject gameOverUI;
 
+    public GameObject background;
+
+    private Boolean gameOver = false;
+
+    public Boolean gameRestart = false;
+
     [Header("Pausing")]
     public Boolean gamePaused;
+
+    public GameObject gamePausedUI;
 
 
 
     void Update()
     {
         SpawnApple();
+        PauseControl();
+        background.SetActive(gamePaused);
+        scoreElements.SetActive(!gamePaused);
         scoreDisplay.text = score.ToString();
+        highScoreDisplay.text = highScore.ToString();
     }
     void Start()
     {
         InstantiatePlane();
         InstantiateWalls();
+        setupGame();
+    }
+
+    private void setupGame() {
+        background.SetActive(false);
+        scoreElements.SetActive(true);
+        gamePausedUI.SetActive(false);
+        gameOverUI.SetActive(false);
+        score = 0;
+        gameRestart = false;
+        gameOver = false;
+        gamePaused = false;
+        appleSpawned = false;
     }
 
     void SpawnApple()
@@ -99,7 +129,30 @@ public class GeneratePlane : MonoBehaviour
     public void TriggerGameOver()
     {
         gamePaused = true;
+        if (highScore < score) {
+            highScore = score;
+        }
+        score = 0;
         gameOverUI.SetActive(true);
+        gameOver = true;
+    }
+
+    public void PauseControl() {
+        if (Input.GetKeyDown(KeyCode.Escape) && !gameOver) { 
+            //print(gamePaused);
+            gamePaused = !gamePaused;
+            //print(gamePaused);
+            gamePausedUI.SetActive(gamePaused);
+        }
+    }
+
+    public void QuitButton() {
+        SceneManager.LoadScene(0);
+    }
+
+    public void RestartGame() {
+        gameRestart = false;
+        setupGame();
     }
 
 }

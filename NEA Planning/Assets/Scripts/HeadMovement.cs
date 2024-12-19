@@ -45,15 +45,24 @@ public class HeadMovement : MonoBehaviour
     public void Start()
     {
         rb = GetComponent<Rigidbody>();
+        setupSnake();
+    }
+
+    private void setupSnake () {
         transform.rotation = Quaternion.identity;
         transform.position = new Vector3 (0, 3, 0);
-
+        snakeParts = new LinkedList<Vector3>();
+        foreach (GameObject part in oldSnakeParts) {
+            Destroy(part);
+        }
+        oldSnakeParts = new LinkedList<GameObject>();
     }
     private void FixedUpdate()
     {
         if(!gameManager.gamePaused) { MoveHead(); }
         else
         {
+            //print("snake movement thinks game is paused");
             rb.velocity = Vector3.zero;
         }
     }
@@ -67,6 +76,9 @@ public class HeadMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             qTurnLeft = true;
+        }
+        if(gameManager.gameRestart == true) {
+
         }
     }
 
@@ -111,7 +123,7 @@ public class HeadMovement : MonoBehaviour
             
         }
         else if (other.gameObject.tag == "Wall") {
-            print("gameover by wall");
+            //print("gameover by wall");
             gameManager.TriggerGameOver();
         }
     }
