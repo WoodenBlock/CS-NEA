@@ -349,6 +349,7 @@
 "Assets/Scripts/Dash.cs"
 "Assets/Scripts/GeneratePlane.cs"
 "Assets/Scripts/HeadMovement.cs"
+"Assets/Scripts/MainManager.cs"
 "Assets/Scripts/MainMenu.cs"
 -langversion:9.0
 

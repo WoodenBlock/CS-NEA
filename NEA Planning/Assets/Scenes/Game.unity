@@ -2099,6 +2099,7 @@ MonoBehaviour:
   scoreElements: {fileID: 2086009234}
   gameOverUI: {fileID: 565164288}
   background: {fileID: 389396049}
+  gameRestart: 0
   gamePaused: 0
   gamePausedUI: {fileID: 178207662}
 --- !u!1 &1614458802
