@@ -62,6 +62,7 @@
     <Analyzer Include="C:\Users\olive\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.0.5\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\SliderManager.cs" />
     <Compile Include="Assets\Scripts\ButtonControl.cs" />
     <Compile Include="Assets\Scripts\MainManager.cs" />
     <Compile Include="Assets\Scripts\AppleCollision.cs" />
@@ -70,7 +71,6 @@
     <Compile Include="Assets\Scripts\GeneratePlane.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\HeadMovement.cs" />
-    <Compile Include="Assets\Scripts\SliderManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

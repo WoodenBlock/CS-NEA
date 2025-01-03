@@ -108,6 +108,7 @@ public class HeadMovement : MonoBehaviour
             if (snakeParts.Contains(currentPos))
             {
                 gameManager.TriggerGameOver();
+                setupSnake();
             }
 
             snakeParts.AddFirst(currentPos);
@@ -125,6 +126,7 @@ public class HeadMovement : MonoBehaviour
         else if (other.gameObject.tag == "Wall") {
             //print("gameover by wall");
             gameManager.TriggerGameOver();
+            setupSnake();
         }
     }
     private void OnTriggerStay(Collider other)

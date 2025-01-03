@@ -18,4 +18,8 @@ public class SliderManager : MonoBehaviour
         mainManager.updateVolume();
     }
 
+    public void UpdateModifiers() {
+        mainManager.UpdateModifiers();
+    }
+
 }

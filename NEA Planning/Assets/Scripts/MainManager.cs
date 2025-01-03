@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class MainManager : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class MainManager : MonoBehaviour
 
     // Now start w/ min values so the code for settting value doesn't break on first opening
     public int fieldOfView = 60;
-    public int volume = 0;
+    public int volume = 100;
 
     public GameObject settingsMenu;
     public Slider fovSlider;
@@ -22,6 +23,14 @@ public class MainManager : MonoBehaviour
     private Camera cam;
 
     private AudioSource eatingSource;
+
+    private GeneratePlane gameManager;
+
+    private HeadMovement snakeManager;
+
+    private Boolean twoApples = false;
+
+    private Boolean fasterSpeed = false;
     private void Awake()
     {
 
@@ -50,6 +59,9 @@ public class MainManager : MonoBehaviour
 
             eatingSource = FindObjectOfType<AudioSource>();
             eatingSource.volume = volume / 100;
+
+            ActivateModifiers();
+
         }
         if (SceneManager.GetActiveScene().buildIndex == 0 && oldScene == 1) {
             oldScene = 0;
@@ -57,6 +69,31 @@ public class MainManager : MonoBehaviour
         }
     }
 
+    // Function to get all modifier values. Called by onPress of modifiers through the input manager intermediate object
+    public void UpdateModifiers() {
+        twoApples = GameObject.Find("Two Apples").GetComponent<ButtonControl>().isOn;
+        fasterSpeed = GameObject.Find("Faster Starting Speed").GetComponent<ButtonControl>().isOn;
+    }
+
+    // Function that updates modifiers with saved values between scenes
+    public void RestoreModifiers() {
+        GameObject.Find("Two Apples").GetComponent<ButtonControl>().ButtonStartup(twoApples);
+        GameObject.Find("Faster Starting Speed").GetComponent<ButtonControl>().ButtonStartup(fasterSpeed);
+    }
+
+    // Function to activate the effcts of the activated modifiers
+    private void ActivateModifiers() {
+        if (twoApples) {
+            gameManager = FindObjectOfType<GeneratePlane>();
+            gameManager.SpawnApple();
+            gameManager.SpawnApple();
+        }
+        if (fasterSpeed) {
+            snakeManager = FindObjectOfType<HeadMovement>();
+            snakeManager.baseSpeed = 100;
+            snakeManager.maxSpeed = 170;
+        }
+    }
 
     // Funcitons finds the instances of the gameObjects that the script maanges
     public void Setup() {
@@ -65,6 +102,7 @@ public class MainManager : MonoBehaviour
         settingsMenu = GameObject.Find("/Canvas/SettingsMenu");
         volumeSlider = GameObject.Find("/Canvas/SettingsMenu/VolumeSlider").GetComponent<Slider>();
         fovSlider = GameObject.Find("/Canvas/SettingsMenu/FoVSlider").GetComponent<Slider>();
+        RestoreModifiers();
 
         // Deactives settings menu to make sure it can't be seen
         settingsMenu.SetActive(false);

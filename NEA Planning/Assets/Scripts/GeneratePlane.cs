@@ -52,7 +52,7 @@ public class GeneratePlane : MonoBehaviour
 
     void Update()
     {
-        SpawnApple();
+        if (!appleSpawned) {SpawnApple();}
         PauseControl();
         background.SetActive(gamePaused);
         scoreElements.SetActive(!gamePaused);
@@ -75,26 +75,22 @@ public class GeneratePlane : MonoBehaviour
         gameRestart = false;
         gameOver = false;
         gamePaused = false;
-        appleSpawned = false;
     }
 
-    void SpawnApple()
+    public void SpawnApple()
     {
-        if (!appleSpawned)
-        {
-            Boolean spawned = false;
-            while (!spawned) {
-                int x = UnityEngine.Random.Range(0, length) * scale * 10;
-                int z = UnityEngine.Random.Range(0, length) * scale * 10;
-                Vector3 posCord = new Vector3(x, 0, z);
-                if (!headMove.snakeParts.Contains(posCord)) {
-                    GameObject newGrid = Instantiate(apple, new Vector3(x, 1f, z), Quaternion.identity, transform);
-                    spawned = true;
-                }
+        Boolean spawned = false;
+        while (!spawned) {
+            int x = UnityEngine.Random.Range(0, length) * scale * 10;
+            int z = UnityEngine.Random.Range(0, length) * scale * 10;
+            Vector3 posCord = new Vector3(x, 0, z);
+            if (!headMove.snakeParts.Contains(posCord)) {
+                GameObject newGrid = Instantiate(apple, new Vector3(x, 1f, z), Quaternion.identity, transform);
+                spawned = true;
             }
-            
-            appleSpawned = true;
         }
+            
+        appleSpawned = true;
     }
 
     void InstantiateWalls() {
