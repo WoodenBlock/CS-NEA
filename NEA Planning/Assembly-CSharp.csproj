@@ -63,13 +63,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ButtonControl.cs" />
+    <Compile Include="Assets\Scripts\MainManager.cs" />
     <Compile Include="Assets\Scripts\AppleCollision.cs" />
     <Compile Include="Assets\Scripts\Dash.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\GeneratePlane.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\HeadMovement.cs" />
-    <Compile Include="Assets\Scripts\MainManager.cs" />
+    <Compile Include="Assets\Scripts\SliderManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -351,6 +351,7 @@
 "Assets/Scripts/HeadMovement.cs"
 "Assets/Scripts/MainManager.cs"
 "Assets/Scripts/MainMenu.cs"
+"Assets/Scripts/SliderManager.cs"
 -langversion:9.0
 
 /deterministic
