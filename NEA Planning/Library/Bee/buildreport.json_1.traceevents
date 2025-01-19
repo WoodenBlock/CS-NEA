@@ -1,0 +1,373 @@
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "BeeDriver" } },
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-2" } },
+{ "pid": 0, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 0, "tid": 1, "ts": 1736935097132101, "dur": 343749, "ph": "X", "name": "Build Player", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1736935097132361, "dur": 3433, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1736935097135796, "dur": 325680, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1736935097461478, "dur": 14370, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1736935097477115, "dur": 23, "ph": "X", "name": "", "args": {} },
+{ "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
+,{ "pid":12345, "tid":0, "ts":1736935097161534, "dur":1316, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097162859, "dur":83, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1736935097162961, "dur":15, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1736935097162976, "dur":384, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1736935097163384, "dur":504, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097163888, "dur":2, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097449412, "dur":123, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097449536, "dur":364, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097449900, "dur":6, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097449906, "dur":28, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097449934, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097449938, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097449944, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097449946, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097449953, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097449955, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097449960, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097449962, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097449968, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097449969, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097449974, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097449975, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097449980, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097449981, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097449986, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097449987, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097449992, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097449993, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097449999, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097450000, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097450005, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097450019, "dur":3, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097450047, "dur":1650, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1736935097163923, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1736935097163924, "dur":4578, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1736935097168503, "dur":144, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":1, "ts":1736935097168647, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1736935097168726, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":1, "ts":1736935097168782, "dur":336, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1736935097169119, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1736935097169177, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1736935097169216, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1736935097169277, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1736935097169313, "dur":33, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1736935097169346, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1736935097169378, "dur":134, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1736935097169513, "dur":49, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1736935097169563, "dur":33, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1736935097169596, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1736935097169627, "dur":31, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":1, "ts":1736935097169658, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1736935097169690, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":1, "ts":1736935097169729, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1736935097169797, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":1, "ts":1736935097169837, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1736935097169877, "dur":33, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":1, "ts":1736935097169911, "dur":28, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1736935097169940, "dur":80656, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":1, "ts":1736935097250597, "dur":90, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1736935097250692, "dur":198714, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1736935097164531, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1736935097164531, "dur":4279, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1736935097168810, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1736935097168920, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1736935097168994, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1736935097169063, "dur":101, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1736935097169166, "dur":90, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1736935097169257, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1736935097169333, "dur":165, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1736935097169498, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1736935097169557, "dur":189280, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":2, "ts":1736935097358838, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1736935097358919, "dur":90500, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1736935097164332, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1736935097164333, "dur":4167, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1736935097168501, "dur":143, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":3, "ts":1736935097168645, "dur":104, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1736935097168751, "dur":139, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":3, "ts":1736935097168891, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1736935097168945, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1736935097168996, "dur":48, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1736935097169045, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1736935097169081, "dur":88, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1736935097169170, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1736935097169238, "dur":299, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1736935097169538, "dur":45, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1736935097169583, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1736935097169618, "dur":279674, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":3, "ts":1736935097449294, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1736935097449359, "dur":0, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":3, "ts":1736935097449359, "dur":0, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097164397, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097164398, "dur":4098, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097168498, "dur":163, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1736935097168662, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097168729, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":4, "ts":1736935097168802, "dur":80, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097168884, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1736935097168943, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097168978, "dur":48, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1736935097169027, "dur":35, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097169063, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1736935097169098, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097169185, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1736935097169245, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097169280, "dur":42, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1736935097169322, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097169360, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1736935097169396, "dur":149, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097169546, "dur":42, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1736935097169588, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097169621, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":4, "ts":1736935097169657, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097169694, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":4, "ts":1736935097169730, "dur":28, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097169759, "dur":37, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":4, "ts":1736935097169796, "dur":28, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097169825, "dur":31, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":4, "ts":1736935097169856, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097169888, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":4, "ts":1736935097169924, "dur":28, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097169953, "dur":27, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":4, "ts":1736935097169995, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097170594, "dur":4868, "ph":"X", "name": "CopyFiles",  "args": { "detail":"NEA Project/NEA Planning_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":4, "ts":1736935097175518, "dur":163, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":4, "ts":1736935097175681, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097175721, "dur":34, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1736935097175763, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097175773, "dur":4438, "ph":"X", "name": "CopyFiles",  "args": { "detail":"NEA Project/NEA Planning_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1736935097180244, "dur":28, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/resources.assets" }}
+,{ "pid":12345, "tid":4, "ts":1736935097180279, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097180286, "dur":6005, "ph":"X", "name": "CopyFiles",  "args": { "detail":"NEA Project/NEA Planning_Data/resources.assets" }}
+,{ "pid":12345, "tid":4, "ts":1736935097186326, "dur":29, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/level1.resS" }}
+,{ "pid":12345, "tid":4, "ts":1736935097186360, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097186451, "dur":1635, "ph":"X", "name": "CopyFiles",  "args": { "detail":"NEA Project/NEA Planning_Data/level1.resS" }}
+,{ "pid":12345, "tid":4, "ts":1736935097188120, "dur":31, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/level1" }}
+,{ "pid":12345, "tid":4, "ts":1736935097188157, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097188163, "dur":1706, "ph":"X", "name": "CopyFiles",  "args": { "detail":"NEA Project/NEA Planning_Data/level1" }}
+,{ "pid":12345, "tid":4, "ts":1736935097189912, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/level0" }}
+,{ "pid":12345, "tid":4, "ts":1736935097189953, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1736935097189959, "dur":2696, "ph":"X", "name": "CopyFiles",  "args": { "detail":"NEA Project/NEA Planning_Data/level0" }}
+,{ "pid":12345, "tid":4, "ts":1736935097192712, "dur":256720, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1736935097164192, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1736935097164193, "dur":4293, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1736935097168499, "dur":151, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":5, "ts":1736935097168650, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1736935097168724, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":5, "ts":1736935097168777, "dur":41, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1736935097168819, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1736935097168859, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1736935097168923, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1736935097168969, "dur":48, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1736935097169017, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1736935097169054, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1736935097169091, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1736935097169130, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1736935097169167, "dur":34, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1736935097169202, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1736935097169237, "dur":37, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1736935097169274, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1736935097169309, "dur":34, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1736935097169343, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1736935097169377, "dur":131, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1736935097169508, "dur":48, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1736935097169557, "dur":146592, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":5, "ts":1736935097316150, "dur":95, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1736935097316248, "dur":133167, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1736935097163898, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1736935097163900, "dur":4581, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1736935097168496, "dur":2, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":6, "ts":1736935097168501, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1736935097168577, "dur":2, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/app.info" }}
+,{ "pid":12345, "tid":6, "ts":1736935097168579, "dur":41, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1736935097168621, "dur":37, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":6, "ts":1736935097168659, "dur":46, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1736935097168705, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":6, "ts":1736935097168755, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1736935097168787, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1736935097168860, "dur":42, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1736935097168903, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1736935097168962, "dur":42, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1736935097169005, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1736935097169044, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1736935097169082, "dur":47, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1736935097169130, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1736935097169180, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1736935097169232, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1736935097169269, "dur":37, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1736935097169306, "dur":30, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1736935097169336, "dur":30, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1736935097169366, "dur":160, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1736935097169527, "dur":103, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1736935097169630, "dur":103, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1736935097169734, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":6, "ts":1736935097169809, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1736935097169883, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":6, "ts":1736935097169956, "dur":79, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1736935097170036, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":6, "ts":1736935097170111, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1736935097190919, "dur":2910, "ph":"X", "name": "CopyFiles",  "args": { "detail":"NEA Project/NEA Planning_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":6, "ts":1736935097193867, "dur":255564, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1736935097164001, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1736935097164002, "dur":4503, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1736935097168506, "dur":162, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":7, "ts":1736935097168669, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1736935097168747, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":7, "ts":1736935097168833, "dur":145, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1736935097168980, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1736935097169054, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1736935097169132, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1736935097169202, "dur":79, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1736935097169283, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1736935097169350, "dur":171, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1736935097169523, "dur":109, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1736935097169632, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1736935097169702, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":7, "ts":1736935097169765, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1736935097169799, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":7, "ts":1736935097169834, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1736935097169866, "dur":29, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":7, "ts":1736935097169895, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1736935097169927, "dur":32, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":7, "ts":1736935097169959, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1736935097169991, "dur":33, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":7, "ts":1736935097170032, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1736935097189205, "dur":1905, "ph":"X", "name": "CopyFiles",  "args": { "detail":"NEA Project/NEA Planning_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":7, "ts":1736935097191145, "dur":33, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":7, "ts":1736935097191185, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1736935097191191, "dur":2216, "ph":"X", "name": "CopyFiles",  "args": { "detail":"NEA Project/NEA Planning_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":7, "ts":1736935097193447, "dur":255982, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1736935097164070, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1736935097164070, "dur":4437, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1736935097168508, "dur":143, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":8, "ts":1736935097168652, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1736935097168732, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":8, "ts":1736935097168818, "dur":42, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1736935097168861, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1736935097168900, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1736935097168951, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1736935097168990, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1736935097169050, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1736935097169089, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1736935097169127, "dur":32, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1736935097169160, "dur":30, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1736935097169191, "dur":47, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1736935097169239, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1736935097169278, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1736935097169321, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1736935097169361, "dur":145, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1736935097169506, "dur":49, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1736935097169556, "dur":105682, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":8, "ts":1736935097275239, "dur":94, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1736935097275337, "dur":174083, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1736935097164161, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1736935097164161, "dur":4329, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1736935097168496, "dur":76, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":9, "ts":1736935097168573, "dur":45, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1736935097168620, "dur":49, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":9, "ts":1736935097168670, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1736935097168705, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":9, "ts":1736935097168744, "dur":41, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1736935097168786, "dur":95, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1736935097168881, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1736935097168938, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1736935097168985, "dur":47, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1736935097169033, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1736935097169071, "dur":45, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1736935097169117, "dur":37, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1736935097169154, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1736935097169187, "dur":488, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1736935097169676, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1736935097169717, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":9, "ts":1736935097169756, "dur":79, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1736935097169836, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":9, "ts":1736935097169903, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1736935097169964, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/sharedassets1.resource" }}
+,{ "pid":12345, "tid":9, "ts":1736935097170042, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1736935097190114, "dur":2019, "ph":"X", "name": "CopyFiles",  "args": { "detail":"NEA Project/NEA Planning_Data/sharedassets1.resource" }}
+,{ "pid":12345, "tid":9, "ts":1736935097192167, "dur":30, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":9, "ts":1736935097192204, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1736935097192211, "dur":2001, "ph":"X", "name": "CopyFiles",  "args": { "detail":"NEA Project/NEA Planning_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":9, "ts":1736935097194250, "dur":255158, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1736935097164265, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1736935097164265, "dur":4226, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1736935097168496, "dur":112, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":10, "ts":1736935097168608, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1736935097168649, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":10, "ts":1736935097168689, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1736935097168727, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":10, "ts":1736935097168774, "dur":94, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1736935097168869, "dur":49, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1736935097168918, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1736935097168956, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1736935097168995, "dur":48, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1736935097169043, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1736935097169078, "dur":42, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1736935097169120, "dur":30, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1736935097169151, "dur":30, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1736935097169181, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1736935097169218, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1736935097169250, "dur":33, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1736935097169283, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1736935097169316, "dur":45, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":10, "ts":1736935097169361, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1736935097169395, "dur":161, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1736935097169556, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1736935097169594, "dur":141666, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":10, "ts":1736935097311261, "dur":111, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1736935097311376, "dur":138051, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1736935097164312, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1736935097164313, "dur":4451, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1736935097168767, "dur":115, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning.exe" }}
+,{ "pid":12345, "tid":11, "ts":1736935097168883, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1736935097168943, "dur":45, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1736935097168988, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1736935097169027, "dur":249371, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":11, "ts":1736935097418399, "dur":82, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1736935097418484, "dur":30929, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1736935097163841, "dur":69, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1736935097163910, "dur":4583, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1736935097168498, "dur":138, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":12, "ts":1736935097168636, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1736935097168675, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":12, "ts":1736935097168731, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1736935097168769, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":12, "ts":1736935097168816, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1736935097168854, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1736935097168892, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1736935097168946, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1736935097168990, "dur":35, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1736935097169026, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1736935097169062, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1736935097169098, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1736935097169133, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1736935097169166, "dur":37, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1736935097169204, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1736935097169236, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1736935097169276, "dur":46, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1736935097169322, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1736935097169357, "dur":24, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1736935097169381, "dur":123, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1736935097169505, "dur":172, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1736935097169678, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":12, "ts":1736935097169753, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1736935097169805, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":12, "ts":1736935097169840, "dur":35, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1736935097169875, "dur":29, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":12, "ts":1736935097169904, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1736935097169938, "dur":29, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":12, "ts":1736935097169967, "dur":30, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1736935097169998, "dur":28, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":12, "ts":1736935097170033, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1736935097171288, "dur":4299, "ph":"X", "name": "CopyFiles",  "args": { "detail":"NEA Project/NEA Planning_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":12, "ts":1736935097175627, "dur":14122, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":12, "ts":1736935097189752, "dur":87, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1736935097189845, "dur":45, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/level0.resS" }}
+,{ "pid":12345, "tid":12, "ts":1736935097189899, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1736935097189907, "dur":2458, "ph":"X", "name": "CopyFiles",  "args": { "detail":"NEA Project/NEA Planning_Data/level0.resS" }}
+,{ "pid":12345, "tid":12, "ts":1736935097192417, "dur":204, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles NEA Project/NEA Planning_Data/boot.config" }}
+,{ "pid":12345, "tid":12, "ts":1736935097192622, "dur":359, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1736935097192984, "dur":256426, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1736935097453708, "dur":1767, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid": 0, "tid": 1, "ts": 1736935097477325, "dur": 609, "ph": "X", "name": "backend_profiler0.traceevents", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1736935097477088, "dur": 875, "ph": "X", "name": "Write chrome-trace events", "args": {} },

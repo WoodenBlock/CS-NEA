@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,145 +11,157 @@ using UnityEngine.UI;
 public class GeneratePlane : MonoBehaviour
 {
     [Header("Area Generation")]
-    public GameObject plane;
-    public GameObject plane1;
-    public GameObject parent;
-    public GameObject wall;
-    public int length;
+    public GameObject Plane;
+    public GameObject Plane1;
+    public GameObject Parent;
+    public GameObject Wall;
+    public int Length;
 
     [Header("Apple Spawning")]
-    public GameObject apple;
-    public Boolean appleSpawned = false;
-    public HeadMovement headMove;
+    public GameObject Apple;
+    public Boolean AppleSpawned = false;
+    public HeadMovement HeadMove;
 
     [Header("Parameters")]
-    public int scale;
-    public (int, int) gridPos;
+    public int Scale;
 
     [Header("Score")]
-    public int score = 0;
-    public int highScore = 0;
-    public Boolean scoreChange = false;
-    public TextMeshProUGUI scoreDisplay;
-    public TextMeshProUGUI highScoreDisplay;
+    public int Score = 0;
+    public int HighScore = 0;
+    public bool IsScoreChange = false;
+    public TextMeshProUGUI ScoreDisplay;
+    public TextMeshProUGUI HighScoreDisplay;
 
-    public GameObject scoreElements;
+    public GameObject ScoreElements;
 
     [Header("Game Over")]
-    public GameObject gameOverUI;
+    public GameObject GameOverUI;
 
-    public GameObject background;
+    public GameObject Background;
 
-    private Boolean gameOver = false;
-
-    public Boolean gameRestart = false;
+    private bool _isGameOver = false;
 
     [Header("Pausing")]
-    public Boolean gamePaused;
+    public bool GamePaused = false;
 
-    public GameObject gamePausedUI;
+    public GameObject GamePausedUI;
 
 
 
     void Update()
     {
-        if (!appleSpawned) {SpawnApple();}
+        if (!AppleSpawned) {SpawnApple();}
+        if (IsScoreChange) {
+            // updates Score UI to new value
+            ScoreDisplay.text = Score.ToString();
+            // checks if new Score is a HighScore
+            if (HighScore < Score) {
+                HighScore = Score;
+                GameObject.FindObjectOfType<MainManager>().UpdateHighscore(HighScore);
+            }
+            HighScoreDisplay.text = HighScore.ToString();
+            // prevents Score from updated until its changed again
+            IsScoreChange = false;
+        }
         PauseControl();
-        background.SetActive(gamePaused);
-        scoreElements.SetActive(!gamePaused);
-        scoreDisplay.text = score.ToString();
-        highScoreDisplay.text = highScore.ToString();
+        Background.SetActive(GamePaused);
+        ScoreElements.SetActive(!GamePaused);
     }
     void Start()
     {
         InstantiatePlane();
         InstantiateWalls();
-        setupGame();
+        SetupGame();
     }
 
-    private void setupGame() {
-        background.SetActive(false);
-        scoreElements.SetActive(true);
-        gamePausedUI.SetActive(false);
-        gameOverUI.SetActive(false);
-        score = 0;
-        gameRestart = false;
-        gameOver = false;
-        gamePaused = false;
+    // resets all elements of the game scene to the correct place
+    private void SetupGame() {
+        Background.SetActive(false);
+        ScoreElements.SetActive(true);
+        GamePausedUI.SetActive(false);
+        GameOverUI.SetActive(false);
+        Score = 0;
+        _isGameOver = false;
+        GamePaused = false;
     }
 
     public void SpawnApple()
     {
         Boolean spawned = false;
         while (!spawned) {
-            int x = UnityEngine.Random.Range(0, length) * scale * 10;
-            int z = UnityEngine.Random.Range(0, length) * scale * 10;
-            Vector3 posCord = new Vector3(x, 0, z);
-            if (!headMove.snakeParts.Contains(posCord)) {
-                GameObject newGrid = Instantiate(apple, new Vector3(x, 1f, z), Quaternion.identity, transform);
+            int x = UnityEngine.Random.Range(0, Length) * Scale * 10;
+            int z = UnityEngine.Random.Range(0, Length) * Scale * 10;
+            Vector3 posCord = new Vector3(x, 3, z);
+            if (!HeadMove.SnakeParts.Contains(posCord)) {
+                GameObject newGrid = Instantiate(Apple, new Vector3(x, 1f, z), Quaternion.identity, transform);
                 spawned = true;
             }
         }
             
-        appleSpawned = true;
+        AppleSpawned = true;
     }
 
     void InstantiateWalls() {
-        for(int x = -1; x < length + 1; x++) {
-            int actualX = x * scale * 10;
-            Instantiate(wall, new Vector3(actualX, 5, -10f), Quaternion.identity, parent.transform);
-            Instantiate(wall, new Vector3(actualX, 5, length * 10), Quaternion.identity, parent.transform);
+        // spawns walls around the planes 
+        // spawns in two waves of two straight lines of walls either side of the plane
+        for(int x = -1; x < Length + 1; x++) {
+            int actualX = x * Scale * 10;
+            Instantiate(Wall, new Vector3(actualX, 5, -10f), Quaternion.identity, Parent.transform);
+            Instantiate(Wall, new Vector3(actualX, 5, Length * 10), Quaternion.identity, Parent.transform);
         }
-        for(int z = 0; z < length; z++) {
-            int actualZ = z * scale * 10;
-            Instantiate(wall, new Vector3(-10f, 5, actualZ), Quaternion.identity, parent.transform);
-            Instantiate(wall, new Vector3(length * 10, 5, actualZ), Quaternion.identity, parent.transform);
+        for(int z = 0; z < Length; z++) {
+            int actualZ = z * Scale * 10;
+            Instantiate(Wall, new Vector3(-10f, 5, actualZ), Quaternion.identity, Parent.transform);
+            Instantiate(Wall, new Vector3(Length * 10, 5, actualZ), Quaternion.identity, Parent.transform);
         }
     }
+
     void InstantiatePlane()
     {
-        for(int i = 0; i < length * length; i++)
+        for(int i = 0; i < Length * Length; i++)
         {
-            int x = (i / length) * scale * 10;
-            int z = (i % length) * scale * 10;
+            // Comment
+            int x = (i / Length) * Scale * 10;
+            int z = (i % Length) * Scale * 10;
             if (i % 2 == 0)
             {
-                Instantiate(plane, new Vector3(x, 0, z), Quaternion.identity, parent.transform);
+                Instantiate(Plane, new Vector3(x, 0, z), Quaternion.identity, Parent.transform);
             }
             else
             {
-                Instantiate(plane1, new Vector3(x, 0, z), Quaternion.identity, parent.transform);
+                Instantiate(Plane1, new Vector3(x, 0, z), Quaternion.identity, Parent.transform);
             }
         }
     }
 
     public void TriggerGameOver()
     {
-        gamePaused = true;
-        if (highScore < score) {
-            highScore = score;
+        GamePaused = true;
+        // Updates HighScore just in case
+        if (HighScore < Score) {
+            HighScore = Score;
         }
-        score = 0;
-        gameOverUI.SetActive(true);
-        gameOver = true;
+        // Resets Score back to 0
+        Score = 0;
+        IsScoreChange = true;
+        GameOverUI.SetActive(true);
+        _isGameOver = true;
     }
 
     public void PauseControl() {
-        if (Input.GetKeyDown(KeyCode.Escape) && !gameOver) { 
-            //print(gamePaused);
-            gamePaused = !gamePaused;
-            //print(gamePaused);
-            gamePausedUI.SetActive(gamePaused);
+        // toggles pause UI 
+        if (Input.GetKeyDown(KeyCode.Escape) && !_isGameOver) { 
+            GamePaused = !GamePaused;
+            GamePausedUI.SetActive(GamePaused);
         }
     }
 
     public void QuitButton() {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     public void RestartGame() {
-        gameRestart = false;
-        setupGame();
+        SetupGame();
     }
 
 }

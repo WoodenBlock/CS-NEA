@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
+using TMPro;
 
 public class MainManager : MonoBehaviour
 {
@@ -15,11 +16,12 @@ public class MainManager : MonoBehaviour
     public int fieldOfView = 60;
     public int volume = 100;
 
-    public GameObject settingsMenu;
-    public Slider fovSlider;
-    public Slider volumeSlider;
+    public GameObject SettingsMenu;
+    public Slider FovSlider;
+    public Slider VolumeSlider;
     private int oldScene = 0;
     
+    private int _highScore;
     private Camera cam;
 
     private AudioSource eatingSource;
@@ -50,15 +52,21 @@ public class MainManager : MonoBehaviour
     }
 
     public void Update() {
-
+        // Checks if the scene has just changed to the game one
         if (SceneManager.GetActiveScene().buildIndex == 1 && oldScene == 0) {
+
             oldScene = 1;
+
             // Finds camera object in gameScene and sets its value to the FoV value
             cam = FindObjectOfType<Camera>();
             cam.fieldOfView = fieldOfView;
 
+            // Find AudioSource and sets its value to the volume
             eatingSource = FindObjectOfType<AudioSource>();
+            // AudioSources use 0-1, while slider used 0-100, so / 100 converts
             eatingSource.volume = volume / 100;
+
+            RestoreHighscore();
 
             ActivateModifiers();
 
@@ -81,6 +89,17 @@ public class MainManager : MonoBehaviour
         GameObject.Find("Faster Starting Speed").GetComponent<ButtonControl>().ButtonStartup(fasterSpeed);
     }
 
+    // Callled by GeneratePlane to update highscore stored
+    public void UpdateHighscore(int newScore) {
+        _highScore = newScore;
+    }
+
+    // Used to restore previous highscore
+    private void RestoreHighscore() {
+        GameObject.Find("High Score Display").GetComponent<TextMeshProUGUI>().text = _highScore.ToString();
+        GameObject.FindObjectOfType<GeneratePlane>().HighScore = _highScore;
+    }
+
     // Function to activate the effcts of the activated modifiers
     private void ActivateModifiers() {
         if (twoApples) {
@@ -90,32 +109,32 @@ public class MainManager : MonoBehaviour
         }
         if (fasterSpeed) {
             snakeManager = FindObjectOfType<HeadMovement>();
-            snakeManager.baseSpeed = 100;
-            snakeManager.maxSpeed = 170;
+            snakeManager.BaseSpeed = 100;
+            snakeManager.MaxSpeed = 170;
         }
     }
 
     // Funcitons finds the instances of the gameObjects that the script maanges
     public void Setup() {
 
-        // Finds the instance of fovSlider and volumeSlider and sets these gameobjects to pointers in the sciprt
-        settingsMenu = GameObject.Find("/Canvas/SettingsMenu");
-        volumeSlider = GameObject.Find("/Canvas/SettingsMenu/VolumeSlider").GetComponent<Slider>();
-        fovSlider = GameObject.Find("/Canvas/SettingsMenu/FoVSlider").GetComponent<Slider>();
+        // Finds the instance of FovSlider and VolumeSlider and sets these gameobjects to pointers in the sciprt
+        SettingsMenu = GameObject.Find("/Canvas/SettingsMenu");
+        VolumeSlider = GameObject.Find("/Canvas/SettingsMenu/VolumeSlider").GetComponent<Slider>();
+        FovSlider = GameObject.Find("/Canvas/SettingsMenu/FoVSlider").GetComponent<Slider>();
         RestoreModifiers();
 
         // Deactives settings menu to make sure it can't be seen
-        settingsMenu.SetActive(false);
+        SettingsMenu.SetActive(false);
 
         // Sets slider values to saved values, so settings save between scenes
-        fovSlider.value = fieldOfView;
-        volumeSlider.value = volume;
+        FovSlider.value = fieldOfView;
+        VolumeSlider.value = volume;
     }
 
     public void updateVolume() {
-        volume = (int) volumeSlider.value;
+        volume = (int) VolumeSlider.value;
     }
     public void updateFoV() {
-        fieldOfView = (int) fovSlider.value;
+        fieldOfView = (int) FovSlider.value;
     }
 }

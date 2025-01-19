@@ -2,9 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
+using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEditor;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using static UnityEngine.Tilemaps.Tilemap;
@@ -13,151 +13,152 @@ public class HeadMovement : MonoBehaviour
 {
     [Header("Movement")]
 
-    public float baseSpeed;
-    public float speedFactor;
-    public float maxSpeed;
+    public float BaseSpeed;
+    public float SpeedFactor;
+    public float MaxSpeed;
 
-    Vector3 moveDirection;
-
-    Rigidbody rb;
-
-    public Transform orientation;
+    private Rigidbody _rb;
 
     // Boolean to see if a movement is waiting to be in the correct position to be enabled
-    private Boolean qTurnRight = false;
-    private Boolean qTurnLeft = false;
-    private Boolean allowMove = true;
+    private bool _qTurnRight = false;
+    private bool _qTurnLeft = false;
+    private bool _allowMove = true;
 
     // Stores current state
-    private Vector3 currentPos;
+    private Vector3 _currentPos;
 
     [Header("Body Parts")]
 
-    public GeneratePlane gameManager;
+    public GeneratePlane GameManager;
 
-    public GameObject snakeBody;
+    public GameObject SnakeBody;
 
-    public LinkedList<Vector3> snakeParts = new LinkedList<Vector3>();
-    private LinkedList<GameObject> oldSnakeParts = new LinkedList<GameObject>();
+    public bool QueueGrowth;
+
+    public LinkedList<Vector3> SnakeParts = new LinkedList<Vector3>();
+    private LinkedList<GameObject> OldSnakeParts = new LinkedList<GameObject>();
 
 
 
     public void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        setupSnake();
+        _rb = GetComponent<Rigidbody>();
+        SetupSnake();
     }
 
-    private void setupSnake () {
+    private void SetupSnake () {
+        // resets snake heads position + rotation
         transform.rotation = Quaternion.identity;
         transform.position = new Vector3 (0, 3, 0);
-        snakeParts = new LinkedList<Vector3>();
-        foreach (GameObject part in oldSnakeParts) {
+        // resets stored snake parts
+        SnakeParts = new LinkedList<Vector3>();
+        // removes all spawned snake parts
+        foreach (GameObject part in OldSnakeParts) {
             Destroy(part);
         }
-        oldSnakeParts = new LinkedList<GameObject>();
+        OldSnakeParts = new LinkedList<GameObject>();
     }
     private void FixedUpdate()
     {
-        if(!gameManager.gamePaused) { MoveHead(); }
+        if(!GameManager.GamePaused) { MoveHead(); }
         else
         {
-            //print("snake movement thinks game is paused");
-            rb.velocity = Vector3.zero;
+            // freezes velocity to 'pause' game
+            _rb.velocity = Vector3.zero;
         }
     }
 
-    private void Update()
+    public void Update()
     {
         if(Input.GetKeyDown(KeyCode.D))
         {
-            qTurnRight = true;
+            _qTurnRight = true;
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        else if (Input.GetKeyDown(KeyCode.A))
         {
-            qTurnLeft = true;
-        }
-        if(gameManager.gameRestart == true) {
-
+            _qTurnLeft = true;
         }
     }
 
     private void SpawnBodyParts()
     {
-        foreach(Vector3 p in snakeParts)
+        foreach(Vector3 p in SnakeParts)
         {
-            GameObject snake = Instantiate(snakeBody, p, Quaternion.identity, gameManager.transform);
-            oldSnakeParts.AddLast(snake);
+            // spawns a snake part at each coordinate in array, and stores this part in linked list
+            GameObject snakePart = Instantiate(SnakeBody, p, Quaternion.identity, GameManager.transform);
+            OldSnakeParts.AddLast(snakePart);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        foreach(GameObject b in oldSnakeParts)
+        // removes all snake parts from last collision enter
+        foreach(GameObject b in OldSnakeParts)
         {
             Destroy(b);
         }
-        oldSnakeParts = new LinkedList<GameObject>();
+        // resets the linked list to remove old objects
+        OldSnakeParts = new LinkedList<GameObject>();
+
         SpawnBodyParts();
 
-        allowMove = true;
+        _allowMove = true;
+
         if (other.gameObject.tag == "TurningPoint")
         {
-            currentPos = other.transform.position; 
+            _currentPos = other.transform.position; 
 
-            if (snakeParts.Contains(currentPos))
+            if (SnakeParts.Contains(_currentPos))
             {
-                gameManager.TriggerGameOver();
-                setupSnake();
+                GameManager.TriggerGameOver();
+             SetupSnake();
             }
 
-            snakeParts.AddFirst(currentPos);
-            if (!gameManager.scoreChange)
-            {
-                snakeParts.RemoveLast();
+            SnakeParts.AddFirst(_currentPos);
 
+            if (QueueGrowth)
+            {
+                QueueGrowth = false;
             }
             else
             {
-                gameManager.scoreChange = false;
+                SnakeParts.RemoveLast();
             }
             
         }
+        // trigger game over by wall
         else if (other.gameObject.tag == "Wall") {
-            //print("gameover by wall");
-            gameManager.TriggerGameOver();
-            setupSnake();
+            GameManager.TriggerGameOver();
+            SetupSnake();
         }
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "TurningPoint" && allowMove)
+        if (other.gameObject.tag == "TurningPoint" && _allowMove)
         {
-            if(qTurnRight)
+            if(_qTurnRight)
             {
                 transform.Rotate(0, 90, 0);
-                rb.velocity = Vector3.zero;
-                transform.position = currentPos + new Vector3(0, 1, 0);
-                qTurnRight = false;
-                allowMove = false;
+                _rb.velocity = Vector3.zero;
+                transform.position = _currentPos + new Vector3(0, 1, 0);
+                _qTurnRight = false;
+                _allowMove = false;
             }
 
-            if (qTurnLeft)
+            else if (_qTurnLeft)
             {
                 transform.Rotate(0, -90, 0);
-                rb.velocity = Vector3.zero;
-                transform.position = currentPos + new Vector3(0, 1, 0);
-                qTurnLeft = false;
-                allowMove = false;
+                _rb.velocity = Vector3.zero;
+                transform.position = _currentPos + new Vector3(0, 1, 0);
+                _qTurnLeft = false;
+                _allowMove = false;
             }
         }
     }
 
-
-
     private void MoveHead()
     {
-        float actualSpeed = Math.Min(baseSpeed + gameManager.score * speedFactor, maxSpeed);
-        rb.AddForce(orientation.forward * actualSpeed * 10f, ForceMode.Force);
+        float actualSpeed = Math.Min(BaseSpeed + GameManager.Score * SpeedFactor, MaxSpeed);
+        _rb.AddForce(transform.forward * actualSpeed * 10f, ForceMode.Force);
     }
 }

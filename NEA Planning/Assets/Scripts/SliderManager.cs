@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class SliderManager : MonoBehaviour
 {
-    private MainManager mainManager;
+    private MainManager _mainManager;
     void Start()
     {
-        mainManager = GameObject.Find("MainManager").GetComponent<MainManager>();
+        // links itself to main manager
+        _mainManager = GameObject.Find("MainManager").GetComponent<MainManager>();
     }
 
+    // functions to get main manager to get new updated values
+    // called by the onPress and onChanged functions
     public void updateFov() {
-        mainManager.updateFoV();
+        _mainManager.updateFoV();
     }
 
     public void updateVolume() {
-        mainManager.updateVolume();
+        _mainManager.updateVolume();
     }
 
     public void UpdateModifiers() {
-        mainManager.UpdateModifiers();
+        _mainManager.UpdateModifiers();
     }
 
 }
